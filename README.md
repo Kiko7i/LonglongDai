@@ -1,4 +1,4 @@
-Welcome to my academic personal website! 🫡.🫡
+Welcome to my academic personal website! ๑_๑ᐝ
 
 [Longlong Dai's academic personal website](kiko7i.github.io/LonglongDai/)
 
