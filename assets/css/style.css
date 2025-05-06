@@ -4,7 +4,7 @@
 body {
     background-color: #fff;
     padding: 0px;
-    font: 16.0px/1.5 Crimson Pro, serif;
+    font: 16.0px/1.5 'Georgia', serif;
     color: #595959;
     font-weight: 400;
     margin: 0;
@@ -118,7 +118,7 @@ body {
 
 email {
     font-size: 14px;
-    font-family: "Ubuntu Mono";
+    font-family: 'Montserrat', sans-serif;
 }
 
 .icon-button i {
@@ -181,7 +181,7 @@ papertitle {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #20212b;
+        background-color: #1b233f;
         color: #dadbdf;
     }
 
