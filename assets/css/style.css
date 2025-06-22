@@ -181,7 +181,7 @@ papertitle {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #2B233F; /* 改变背景色*/
+        background-color: #222B5F; /* 改变背景色*/
         color: #dadbdf;
     }
 
