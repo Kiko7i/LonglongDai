@@ -18,10 +18,10 @@
           integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin=anonymous>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/publications.css">
-
-
 </head>
 <body>
+
+
 <div class="wrapper">
     <!-----------------------------------左侧头部----------------------------------->
     <header>
@@ -53,12 +53,44 @@
                 <i class="fas fa-blog"></i>
                 <!--                <i class="fab fa-twitter"></i>-->
             </a>
-                        <a style="margin: 0 0 0 0" href="https://orcid.org/0009-0004-2986-6155">
+            <a style="margin: 0 0 0 0" href="https://orcid.org/0009-0004-2986-6155">
                 <i class="fas fa-seedling"></i>
             </a>
         </div>
         <br>
+
+        <!-------------------------------坤坤代码-开始处------------------------------------->
+        <style>
+            .fancy-avatar img {
+                --s: 130px;
+                width: var(--s);
+                aspect-ratio: 1;
+                padding: calc(0.09 * var(--s)) calc(var(--s) / 2 - var(--_p));
+                box-sizing: border-box;
+                object-fit: cover;
+                border-image: radial-gradient(#e5414e 69%, #0000 70%) 84.5% /
+          calc(var(--s) / 2) / 0 var(--_p);
+                clip-path: polygon(
+                        calc(-41% - var(--_p)) 0,
+                        calc(50% - var(--_p)) 91%,
+                        calc(50% + var(--_p)) 91%,
+                        calc(141% + var(--_p)) 0
+                );
+                transition: 0.5s;
+                cursor: pointer;
+                --_p: 0px;
+            }
+            img:hover {
+                --_p: calc(var(--s) / 2);
+            }
+        </style>
+        <div class="fancy-avatar" style="margin-top: 50px;">
+            <img src="https://gw.alicdn.com/imgextra/O1CN01rOGq191KlTe1YyiZM_!!6000000001204-2-yinhe.png_.webp" alt="cool image"/>
+        </div>
+        <!-------------------------------坤坤代码结束处------------------------------------->
+
     </header>
+
     <!----------------------------------右侧主体----------------------------------->
     <section>
         <h2 id="about-me">🙋‍♂️ About Me</h2>
