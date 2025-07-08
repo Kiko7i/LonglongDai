@@ -61,32 +61,110 @@
 
         <!-------------------------------坤坤代码-开始处------------------------------------->
         <style>
-            .fancy-avatar img {
+            .fancy-avatar {
                 --s: 130px;
+                position: relative;
+                display: inline-block;
+                overflow: visible;
+                margin-top: 50px;
+            }
+
+            .fancy-avatar img {
+                --_p: 0px;
                 width: var(--s);
                 aspect-ratio: 1;
                 padding: calc(0.09 * var(--s)) calc(var(--s) / 2 - var(--_p));
                 box-sizing: border-box;
                 object-fit: cover;
-                border-image: radial-gradient(#3EB5ED 69%, #0000 72%) 84.5% /
-          calc(var(--s) / 2) / 0 var(--_p);
+                border-image: radial-gradient(#3EB5ED 69%, #0000 72%) 84.5% / calc(var(--s) / 2) / 0 var(--_p);
                 clip-path: polygon(
                         calc(-41% - var(--_p)) 0,
                         calc(50% - var(--_p)) 91%,
                         calc(50% + var(--_p)) 91%,
                         calc(141% + var(--_p)) 0
                 );
-                transition: 0.5s;
+                transition: 0.3s;
                 cursor: pointer;
-                --_p: 0px;
             }
-            img:hover {
+
+            .fancy-avatar img:hover {
                 --_p: calc(var(--s) / 2);
             }
+
+            .fancy-avatar.clicked img {
+                animation: jelly 0.5s ease;
+            }
+
+            @keyframes jelly {
+                0%, 100% {
+                    transform: scale(1, 1);
+                }
+                25% {
+                    transform: scale(1.2, 0.8);
+                }
+                50% {
+                    transform: scale(0.8, 1.2);
+                }
+                75% {
+                    transform: scale(1.05, 0.95);
+                }
+            }
+
+            .barrage {
+                position: absolute;
+                top: -30px;
+                left: 50%;
+                transform: translateX(-50%) translateY(0);
+                font-size: 16px;
+                font-weight: bold;
+                color: white; /* 白字 */
+                user-select: none;
+                opacity: 0;
+                animation: barrage-fly 1s ease forwards;
+                pointer-events: none;
+                white-space: nowrap;
+                z-index: 10;
+                background: rgba(62, 181, 237, 0.8);
+                border: 3px solid rgba(62, 181, 237, 0.7);
+                border-radius: 8px;
+                padding: 4px 12px;
+                box-sizing: border-box;
+            }
+
+            @keyframes barrage-fly {
+                0% {
+                    opacity: 1;
+                    transform: translateX(-50%) translateY(0);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateX(-50%) translateY(-40px);
+                }
+            }
         </style>
-        <div class="fancy-avatar" style="margin-top: 15px;">
+
+        <div class="fancy-avatar" onclick="triggerClick(this)">
             <img src="https://gw.alicdn.com/imgextra/O1CN01rOGq191KlTe1YyiZM_!!6000000001204-2-yinhe.png_.webp" alt="cool image"/>
         </div>
+
+        <script>
+            function triggerClick(el) {
+                el.classList.add('clicked');
+                const ripple = document.createElement('div');
+                ripple.className = 'ripple';
+                el.appendChild(ripple);
+                const barrage = document.createElement('div');
+                barrage.className = 'barrage';
+                barrage.textContent = 'Hello 🎃';
+                barrage.style.fontFamily = "'Pacifico', cursive";
+                el.appendChild(barrage);
+                setTimeout(() => {
+                    ripple.remove();
+                    barrage.remove();
+                    el.classList.remove('clicked');
+                }, 1000);
+            }
+        </script>
         <!-------------------------------坤坤代码结束处------------------------------------->
 
     </header>
