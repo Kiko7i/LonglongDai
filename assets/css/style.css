@@ -235,7 +235,7 @@ papertitle {
 }
 
 .image.avatar img {
-    border-radius: 100%;
+    border-radius: 20%; /* 决定头像形状*/
     width: 60%;
     padding: 25px;
 }
@@ -512,8 +512,8 @@ footer {
     }
 
     .image.avatar img {
-        border-radius: 100%;
-        width: 117px;
+        border-radius: 20%;
+        width: 127px;
         padding: 20px;
     }
 
