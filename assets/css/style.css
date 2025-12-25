@@ -565,8 +565,8 @@ footer {
     }
 
     .image.avatar img {
-        border-radius: 100%;
-        width: 95px;
+        border-radius: 20%;
+        width: 127px;
         padding: 20px;
     }
 
