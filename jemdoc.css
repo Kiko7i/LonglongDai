@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font-family: Georgia, Arial, serif;
+    font-family: 'Merriweather', Georgia, Arial, serif;
     color: #000;
     background-color: #ffffff;
     text-align: left;
@@ -137,7 +137,7 @@ strong {
 
 
 h1, h2, h3 {
-    color: #527bbd;
+    /*color: #527bbd;*/
     margin-top: 0.7em;
     margin-bottom: 0.3em;
     padding-bottom: 0.2em;
